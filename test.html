@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        .home {
+            background-color: #e9f69a;
+            margin: 3em;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<div class="home">
+    <ul id="li-list">
+        <li class="li-1">1</li>
+        <li class="li-2">2</li>
+        <li class="li-3">3</li>
+        <input type="submit" value="提交" class="submit">
+        <select name="selectbox">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </ul>
+
+    <canvas width="300px" height="300px" id="cvs">canvas示例</canvas>
+
+</div>
+<script>
+    window.onload = function () {
+        if (navigator.onLine) {
+            console.log('网络已连接...');
+        } else {
+            console.log('网络已断开...');
+        }
+        _clickEvent();
+        _cvs();
+    }
+
+    function _cvs() {
+        let cvs = document.getElementById('cvs');
+
+        let context = cvs.getContext('2d');
+
+        context.beginPath();
+        context.arc(100, 100, 99, 0, 2 * Math.PI, false);
+        context.moveTo(194, 100);
+        context.arc(100, 100, 94, 0, 2 * Math.PI, false);
+        context.moveTo(100, 100);
+        context.lineTo(100, 20);
+        context.moveTo(100, 100);
+        context.lineTo(40, 100);
+        context.strokeStyle = 'red';
+        context.stroke();
+        context.textAlign = 'center';
+        context.textBaseline = 'middle';
+        context.fillText(cvs.textContent, 100, 15);
+    }
+
+    function _clickEvent() {
+        // 事件委托
+        let items = document.getElementById('li-list');
+
+        items.onclick = (e) => {
+            let target = e.target;
+            if (target.className === 'li-1') {
+                console.log('点击...1');
+            } else if (target.className === 'li-2') {
+                console.log('点击...2');
+            } else if (target.className === 'li-3') {
+                console.log('点击...3');
+                console.log(new Date(2017, 2, 18));
+            } else if (target.className === 'submit') {
+                console.log('提交');
+                e.target.disabled = true;
+            } else if (target.name === 'selectbox') {
+                console.log(e.target.value);
+            }
+        };
+    }
+
+</script>
+</body>
+</html>

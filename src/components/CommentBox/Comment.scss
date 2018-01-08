@@ -1,0 +1,24 @@
+.Comment {
+  border-bottom: 1px dashed lightgreen;
+  padding: 10px 1em 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  user-select: none;
+  .item {
+    padding: 3px 0;
+    &.name {
+      color: yellowgreen;
+    }
+    &.content {
+      color: cornflowerblue;
+    }
+    &.time {
+      color: deeppink;
+    }
+  }
+  &:hover {
+    background-color: #e6e6e6;
+    cursor: pointer;
+  }
+}

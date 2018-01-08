@@ -1,0 +1,32 @@
+.CommentForm {
+  margin: 30px;
+  text-align: left;
+  input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 2.5em;
+    padding-left: 1em;
+    font-size: 0.8em;
+  }
+  textarea {
+    width: 100%;
+  }
+  button {
+    margin-top: 20px;
+    padding: 0.5em 2em;
+    border: none;
+    outline: none;
+    border-radius: 0.5em;
+    color: whitesmoke;
+    background-color: #666;
+    cursor: not-allowed;
+    transition: all 1s;
+    &.active {
+      cursor: pointer;
+      background-color: rebeccapurple;
+      &:hover {
+        background-color: deeppink;
+      }
+    }
+  }
+}

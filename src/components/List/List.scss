@@ -1,0 +1,14 @@
+.List {
+    width: 250px;
+    margin: 10px 0;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        li {
+            text-align: left;
+            padding: 5px 2em;
+        }
+    }
+}

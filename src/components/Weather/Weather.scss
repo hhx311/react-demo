@@ -1,0 +1,15 @@
+.CitySelector {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.Weather {
+  margin-top: 10px;
+  padding-left: 10px;
+  span {
+    color: deeppink;
+    &:nth-of-type(n + 2) {
+      margin-left: 20px;
+    }
+  }
+}

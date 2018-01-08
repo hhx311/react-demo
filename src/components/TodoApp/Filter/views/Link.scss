@@ -1,0 +1,26 @@
+.filter {
+  user-select: none;
+  flex: 1;
+  text-align: center;
+  padding: 0;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: #d4ffcc;
+  }
+  &.selected { // 选中
+    color: deeppink;
+  }
+  &.unselected { // 未选中
+    a {
+      color: #2c48c4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      flex: 1;
+    }
+  }
+}

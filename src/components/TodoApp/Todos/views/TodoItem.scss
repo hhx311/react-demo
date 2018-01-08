@@ -1,0 +1,41 @@
+.todo-item {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dashed #999;
+  .toggle {
+    margin: 0 3px;
+    cursor: pointer;
+  }
+  .text {
+    color: #bd1715;
+  }
+  .remove {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  &.todo-item-done {
+    .text {
+      color: #2fd43b;
+    }
+  }
+
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

@@ -1,0 +1,14 @@
+.ProductRow {
+  display: flex;
+  text-align: left;
+  .name {
+    flex: 1;
+    font-weight: bold;
+    &.unstock {
+      color: red;
+    }
+  }
+  .price {
+    flex: 1;
+  }
+}

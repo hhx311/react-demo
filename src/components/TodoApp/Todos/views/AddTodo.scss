@@ -1,0 +1,14 @@
+.add-todo {
+  .new-todo-text {
+    height: 2em;
+  }
+  .add-btn {
+    height: 2em;
+    margin-left: 0.3em;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      color: deeppink;
+    }
+  }
+}
