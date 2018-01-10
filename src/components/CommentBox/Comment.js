@@ -7,9 +7,7 @@ import './Comment.scss';
 class Comment extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            comment: this.props.comment
-        };
+        this.state = {};
 
         this.handleRemove = this.handleRemove.bind(this);
     }
@@ -20,7 +18,7 @@ class Comment extends Component {
     }
 
     render() {
-        const comment = this.state.comment;
+        const comment = this.props.comment;
         return (
             <li className="Comment" onDoubleClick={this.handleRemove}>
                 <span className="item name">用户名: {comment.name}</span>

@@ -1,8 +1,15 @@
 .LoginControl {
-    width: 250px;
-    text-align: left;
-    margin: 20px;
-    button {
-        margin-bottom: 0.5em;
+  width: 250px;
+  text-align: left;
+  margin: 20px;
+  button {
+    margin-bottom: 0.5em;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 0.5em;
+    outline: none;
+    &:hover {
+      box-shadow: 0 0 1px 1px deeppink;
     }
+  }
 }

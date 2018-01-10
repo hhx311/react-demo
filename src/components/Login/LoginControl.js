@@ -4,36 +4,42 @@
 import React, {Component} from 'react';
 import './LoginControl.scss';
 
-function LoginButton(props) {
-    return (
-        <button onClick={props.onClick} style={{color: "green"}}>
-            login
-        </button>
-    );
-}
+const Button = ({onClick, title = 'Click', color = 'red'}) => (
+    <button onClick={onClick} style={{color: `${color}`}}>
+        {title}
+    </button>
+);
 
-function LogoutButton(props) {
-    return (
-        <button onClick={props.onClick} style={{color: "red"}}>
-            logout
-        </button>
-    );
-}
+/*function LoginButton(props) {
+ return (
+ <button onClick={props.onClick} style={{color: "green"}}>
+ login
+ </button>
+ );
+ }
 
-function User(props) {
+ function LogoutButton(props) {
+ return (
+ <button onClick={props.onClick} style={{color: "red"}}>
+ logout
+ </button>
+ );
+ }*/
+
+const User = () => {
     return <div>欢迎登陆...</div>
-}
+};
 
-function Guest(props) {
+const Guest = () => {
     return <div>游客模式...</div>
-}
+};
 
-function LoginContent(props) {
+const LoginContent = (props) => {
     const isLogin = props.isLogin;
     return isLogin ? <User/> : <Guest/>;
-}
+};
 
-class LoginControl extends Component {
+export default class LoginControl extends Component {
     // 构造
     constructor(props) {
         super(props);
@@ -59,12 +65,12 @@ class LoginControl extends Component {
 
     render() {
         const isLogin = this.state.isLogin;
-        let button = null;
-        if (isLogin) {
-            button = <LogoutButton onClick={this.handleLogoutClick}/>;
-        } else {
-            button = <LoginButton onClick={this.handleLoginClick}/>;
-        }
+        const button = (
+            isLogin ?
+                <Button title="退出" color="red" onClick={this.handleLogoutClick}/>
+                :
+                <Button title="登录" color="blue" onClick={this.handleLoginClick}/>
+        );
 
         return (
             <div className="LoginControl">
@@ -74,4 +80,3 @@ class LoginControl extends Component {
         );
     }
 }
-export default LoginControl;

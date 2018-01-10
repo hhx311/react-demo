@@ -4,9 +4,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import './Nav.scss';
+
 const Nav = () => (
     <ul className="nav-tabs">
-        <li><Link to="/clock">Clock</Link></li>
+        {/*<li><Link to="/clock">Clock</Link></li>*/}
         <li><Link to="/login-control">LoginControl</Link></li>
         <li><Link to="/comment-box">CommentBox</Link></li>
         <li><Link to="/home">Home</Link></li>
@@ -16,6 +18,7 @@ const Nav = () => (
         <li><Link to="/props-child">PropsChild</Link></li>
         <li><Link to="/todo-app">TodoApp</Link></li>
         <li><Link to="/weather">Weather</Link></li>
+        <li><Link to="/router-demo">RouterDemo</Link></li>
     </ul>
 );
 

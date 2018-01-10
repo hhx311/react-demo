@@ -1,0 +1,25 @@
+ul.nav-tabs {
+  list-style-type: none;
+  margin: 0;
+  padding: 4px 6px;
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    flex: 1;
+    text-align: left;
+    margin: 4px 6px;
+    background-color: #95fac6;
+    a {
+      text-decoration: none;
+      padding: 0.5em 1em;
+      display: block;
+    }
+    &:hover {
+      a {
+        color: #cd00ff;
+      }
+    }
+  }
+}
+
+

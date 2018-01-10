@@ -8,7 +8,7 @@ class EssayForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: 'Please write an essay about your favorite DOM element.',
+            value: 'Please write',
             select: '深圳'
         };
 
@@ -40,6 +40,7 @@ class EssayForm extends Component {
                     <textarea value={this.state.value} onChange={this.handleChange}/>
                 </label>
                 <input type="submit" value="Submit"/>
+                <br/>
                 <select name="" id=""
                         value={this.state.select}
                         onChange={this.handleSelect}
@@ -69,9 +70,9 @@ class List extends Component {
         const arr = [1, 3, 4, 6];
         return (
             <div className="List">
-                <ul>
+                <ul style={{marginBottom: '10px'}}>
                     {
-                        arr.map((num, index) => <li key={`num-${index}`}>{num * num}</li>)
+                        arr.map((num, index) => <li key={num}>{num * num}</li>)
                     }
                 </ul>
                 <EssayForm/>
